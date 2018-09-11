@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Het-es-EoH">
+                                <rect key="frame" x="87" y="232" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.76372327070000001" blue="0.28385973199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="C8Y-nZ-AEf"/>
+                                    <constraint firstAttribute="height" constant="128" id="UyW-s8-91K"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="my_collapse">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="my_constraint" destination="UyW-s8-91K" id="gJI-iP-16r"/>
+                                    <outletCollection property="my_constraint" destination="C8Y-nZ-AEf" id="cpk-zw-SXW"/>
+                                    <outletCollection property="my_constraint" destination="Nqz-bZ-qWD" id="CGP-YI-K7v"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTW-wa-Tco">
+                                <rect key="frame" x="184" y="390" width="46" height="30"/>
+                                <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azO-Ba-n9S" customClass="TableViewCell">
+                                <rect key="frame" x="87" y="94" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="JL1-kp-fjn"/>
+                                    <constraint firstAttribute="width" constant="240" id="ZCK-i1-nZI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="UaU-g1-RaS" customClass="myTableViewCell">
+                                <rect key="frame" x="207" y="480" width="0.0" height="45"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UaU-g1-RaS" id="9Ky-F1-K7D">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="44.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="AIR-IO-nfC"/>
+                                    <constraint firstAttribute="height" constant="45" id="OMG-GW-vIY"/>
+                                </constraints>
+                            </tableViewCell>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="azO-Ba-n9S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="2Ls-wp-3jy"/>
+                            <constraint firstItem="UaU-g1-RaS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4fg-VK-fqp"/>
+                            <constraint firstItem="gTW-wa-Tco" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7S3-DO-xgd"/>
+                            <constraint firstItem="azO-Ba-n9S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LAV-oV-bLQ"/>
+                            <constraint firstItem="gTW-wa-Tco" firstAttribute="top" secondItem="Het-es-EoH" secondAttribute="bottom" constant="30" id="Nqz-bZ-qWD"/>
+                            <constraint firstItem="Het-es-EoH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="akb-lX-soo"/>
+                            <constraint firstItem="Het-es-EoH" firstAttribute="top" secondItem="azO-Ba-n9S" secondAttribute="bottom" constant="10" id="cjk-PU-9G9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UaU-g1-RaS" secondAttribute="bottom" constant="211" id="iLK-1u-YiT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="my_view" destination="Het-es-EoH" id="JSn-dH-vrr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122" y="-191"/>
+        </scene>
+    </scenes>
+</document>
